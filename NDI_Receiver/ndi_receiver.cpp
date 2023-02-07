@@ -191,7 +191,7 @@ void NdiReceiver::UpdateGui(void *context, int interface)
             UpdateStreamList();
         }
         ImGui::Separator();
-        ImGui::SetNextItemWidth(200);
+        ImGui::SetNextItemWidth(120);
         if (ImGui::Combo(CreateControlString("NDI Streams", GetInstanceName()).c_str(), &ndi_stream_idx_, [](void* data, int idx, const char** out_text) {
             *out_text = ((const std::vector<std::string>*)data)->at(idx).c_str();
             return true;

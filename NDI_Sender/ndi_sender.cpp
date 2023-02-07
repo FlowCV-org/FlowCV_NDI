@@ -154,7 +154,7 @@ void NdiSender::UpdateGui(void *context, int interface)
     ImGui::SetCurrentContext(imCurContext);
 
     if (interface == (int)FlowCV::GuiInterfaceType_Controls) {
-        ImGui::SetNextItemWidth(200);
+        ImGui::SetNextItemWidth(120);
         if (ImGui::InputText(CreateControlString("NDI Name", GetInstanceName()).c_str(), tmp_name_buf, 64, ImGuiInputTextFlags_EnterReturnsTrue)) {
             ndi_stream_name_ = std::string(tmp_name_buf);
             init_once_ = true;
